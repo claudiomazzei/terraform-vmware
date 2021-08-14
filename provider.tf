@@ -1,7 +1,7 @@
 # Configure the vSphere Provider
 provider "vsphere" {
-  vsphere_server       = "esxi-node-1.intra.lab"
+  vsphere_server       = "10.0.0.26"
   user                 = "root"
-  password             = "f=e5acd1808"
+  password             = "vmxTLCfrbr"
   allow_unverified_ssl = true
 }
