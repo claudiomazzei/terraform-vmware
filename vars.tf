@@ -1,46 +1,57 @@
 #
-# Variables with default values, alter according to the your environment.
+# Lista de variaveis usadas para criar o ambiente.
 #
 variable "data_center" {
-  default = "ha-datacenter"
+    description = "descobrir"  
+    default = ""
 }
 
 variable "data_store" {
-  default = "data-vol-1"
+    description = "storage pool de destino "  
+    default = "vm2"
 }
 
 variable "mgmt_lan" {
-  default = "VM Network"
+    description = "Nome da rede"
+    default = "VM Network"
 }
 
 variable "net_adapter_type" {
-  default = "vmxnet3"
+    description = "Tipo de adaptador de rede"
+    default = "vmxnet3"
 }
 
 variable "guest_id" {
-  default = "centos7_64Guest"
+    description = "Tipo do sistema"
+    default = "centos7_64Guest"
 }
 
 variable "custom_iso_path" {
-  default = "iso/centos7-custom-img-disk50gb-v0.0.3.iso"
+    description = "Imagem a ser instalada do sistema"
+    default = "iso/centos7-custom-img-disk50gb-v0.0.3.iso"
 }
 
 variable "name_new_vm" {
-  description = "Input a name for Virtual Machine Ex. new_vm"
+    description = "Nome da VM"
+    default = "AutomationTerraform - Applience"
 }
 
 variable "vm_count" {
-  description = "Number of instaces"
+    description = "Quantidade de instancias a serem criadas"
+    default = "1"
 }
 
 variable "disk_size" {
-  description = "Amount of Disk, Ex. 50, 60, 70 OBS: The amount may not be less than 50"
+    description = "Quantidade de disco, Ex. 50, 60, 70 OBS: A quantidade não pode ser menor que 50?"
+    default = "20"
 }
 
 variable "num_cpus" {
-  description = "Amount of vCPU's, Ex. 2"
+    description = "Quantidade de vCPU's, Ex. 2"
+    default = "1"
 }
 
 variable "num_mem" {
-  description = "Amount of Memory, Ex. 1024, 2048, 3073, 4096"
+    description = "Qantidade de memoria, Ex. 1024, 2048, 3073, 4096"
+    default = "1024"
 }

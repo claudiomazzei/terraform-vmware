@@ -1,4 +1,4 @@
-# Build New VM
+# Construção da nova VM
 data "vsphere_datacenter" "datacenter" {
   name = var.data_center
 }
@@ -13,7 +13,7 @@ data "vsphere_resource_pool" "pool" {
 
 data "vsphere_network" "networking" {
   name          = var.mgmt_lan
-  datacenter_id = data.vsphere_datacenter.datacenter.id
+#  datacenter_id = data.vsphere_datacenter.datacenter.id
 }
 
 resource "vsphere_virtual_machine" "virtualmachine" {
