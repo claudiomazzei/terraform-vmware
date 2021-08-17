@@ -2,12 +2,12 @@
 # Lista de variaveis usadas para criar o ambiente.
 #
 variable "data_center" {
-    description = "descobrir"  
-    default = ""
+    description = "Pasta de trabalho onde será criada a instancia"  
+    default = "Ambiente de Testes"
 }
 
 variable "data_store" {
-    description = "storage pool de destino "  
+    description = "storage pool em que a instancia sera criada"  
     default = "vm2"
 }
 
@@ -23,17 +23,17 @@ variable "net_adapter_type" {
 
 variable "guest_id" {
     description = "Tipo do sistema"
-    default = "centos7_64Guest"
+    default = "centos8.2_64Guest"
 }
 
 variable "custom_iso_path" {
     description = "Imagem a ser instalada do sistema"
-    default = "iso/centos7-custom-img-disk50gb-v0.0.3.iso"
+    default = "/Downloads/CentOS-8.2.2004-x86_64-minimal.iso"
 }
 
 variable "name_new_vm" {
     description = "Nome da VM"
-    default = "AutomationTerraform - Applience"
+    default = "AutomationTerraform - CentOS"
 }
 
 variable "vm_count" {
@@ -42,7 +42,7 @@ variable "vm_count" {
 }
 
 variable "disk_size" {
-    description = "Quantidade de disco, Ex. 50, 60, 70 OBS: A quantidade não pode ser menor que 50?"
+    description = "Tamanho do disco"
     default = "20"
 }
 
